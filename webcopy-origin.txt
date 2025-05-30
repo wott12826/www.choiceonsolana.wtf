@@ -1,0 +1,44 @@
+Uri: https://code.jquery.com/jquery-3.6.4.slim.min.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\jquery-3.6.4.slim.min.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\index.htm
+Content Type: text/html
+
+Uri: https://www.choiceonsolana.wtf/assets/css/style.css
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\css\style.css
+Content Type: text/css
+
+Uri: https://www.choiceonsolana.wtf/assets/fonts/get_schwifty.ttf
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\fonts\get_schwifty.ttf
+Content Type: font/ttf
+
+Uri: https://www.choiceonsolana.wtf/assets/images/bg.png
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\images\bg.png
+Content Type: image/png
+
+Uri: https://www.choiceonsolana.wtf/assets/js/app.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\js\app.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/assets/js/cake.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\js\cake.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/assets/js/dildo.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\js\dildo.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/assets/js/handleTweet.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\js\handleTweet.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/assets/js/rwdImageMaps.js
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\js\rwdImageMaps.js
+Content Type: application/javascript
+
+Uri: https://www.choiceonsolana.wtf/assets/video/0808(1)-1.mp4
+File Name: C:\Downloaded Web Sites\www.choiceonsolana.wtf\assets\video\0808(1)-1.mp4
+Content Type: video/mp4
+
