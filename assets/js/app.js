@@ -28,45 +28,42 @@ const styleBoxes = () => {
     });
 }
 
-setInterval(() => {
-    if (window.innerWidth > 400) {
-        console.log('Window width > 400, initializing rwdImageMaps');
-        if (typeof $ === 'undefined') {
-            console.error('jQuery is not loaded!');
-            return;
-        }
-        if (typeof $.fn.rwdImageMaps !== 'function') {
-            console.error('rwdImageMaps plugin is not loaded!');
-            return;
-        }
-        
-        $(document).ready(function (e) {
+// Initialize immediately
+if (typeof $ !== 'undefined') {
+    $(document).ready(function (e) {
+        if (typeof $.fn.rwdImageMaps === 'function') {
             $("img[usemap]").rwdImageMaps();
-        });
+        }
         setTimeout(() => {
             styleBoxes();
-        }, 2000)
+        }, 1000);
+    });
+}
+
+// Also check periodically
+setInterval(() => {
+    if (typeof $ !== 'undefined') {
+        $(document).ready(function (e) {
+            if (typeof $.fn.rwdImageMaps === 'function') {
+                $("img[usemap]").rwdImageMaps();
+            }
+            setTimeout(() => {
+                styleBoxes();
+            }, 1000);
+        });
     }
-}, 1000)
+}, 2000);
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 400) {
-        console.log('Window resized > 400, reinitializing rwdImageMaps');
-        if (typeof $ === 'undefined') {
-            console.error('jQuery is not loaded!');
-            return;
-        }
-        if (typeof $.fn.rwdImageMaps !== 'function') {
-            console.error('rwdImageMaps plugin is not loaded!');
-            return;
-        }
-        
+    if (typeof $ !== 'undefined') {
         $(document).ready(function (e) {
-            $("img[usemap]").rwdImageMaps();
+            if (typeof $.fn.rwdImageMaps === 'function') {
+                $("img[usemap]").rwdImageMaps();
+            }
+            setTimeout(() => {
+                styleBoxes();
+            }, 1000);
         });
-        setTimeout(() => {
-            styleBoxes();
-        }, 2000)
     }
 });
 
