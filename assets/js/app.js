@@ -1,67 +1,41 @@
 const styleBoxes = () => {
-    console.log('Starting styleBoxes function');
-    
-    const box = document.getElementById('box5');
-    const area = document.getElementById('area5');
-    
-    console.log('Processing box5:', box);
-    console.log('Processing area5:', area);
-    
-    if (!box || !area) {
-        console.error('Missing element: box5 or area5');
-        return;
-    }
-    
-    if (!area.coords) {
-        console.error('Missing coords for area5');
-        return;
-    }
 
-    const coords = area.coords.split(",");
-    console.log('Coords for area5:', coords);
+    Array(5).fill(0).forEach((_, i) => {
+        const box = document.getElementById(`box${i + 1}`);
 
-    box.style.width = (Math.abs(coords[0] - coords[2])) + "px"
-    box.style.height = (Math.abs(coords[1] - coords[3])) + "px"
-    box.style.left = Number(coords[0]) + "px"
-    box.style.top = Number(coords[1]) + "px"
+        const area = document.getElementById(`area${i + 1}`);
+
+        const coords = area.coords.split(",");
+
+        box.style.width = (Math.abs(coords[0] - coords[2])) + "px"
+        box.style.height = (Math.abs(coords[1] - coords[3])) + "px"
+        box.style.left = Number(coords[0]) + "px"
+        box.style.top = Number(coords[1]) + "px"
+    });
+
 }
 
-// Initialize immediately
-if (typeof $ !== 'undefined') {
-    $(document).ready(function (e) {
-        if (typeof $.fn.rwdImageMaps === 'function') {
+setInterval(() => {
+    if (window.innerWidth > 400) {
+        $(document).ready(function (e) {
             $("img[usemap]").rwdImageMaps();
-        }
+        });
         setTimeout(() => {
             styleBoxes();
-        }, 1000);
-    });
-}
-
-// Also check periodically
-setInterval(() => {
-    if (typeof $ !== 'undefined') {
-        $(document).ready(function (e) {
-            if (typeof $.fn.rwdImageMaps === 'function') {
-                $("img[usemap]").rwdImageMaps();
-            }
-            setTimeout(() => {
-                styleBoxes();
-            }, 1000);
-        });
+        }, 2000)
     }
-}, 2000);
+}, 1000)
+
+
 
 window.addEventListener("resize", () => {
-    if (typeof $ !== 'undefined') {
+    if (window.innerWidth > 400) {
         $(document).ready(function (e) {
-            if (typeof $.fn.rwdImageMaps === 'function') {
-                $("img[usemap]").rwdImageMaps();
-            }
-            setTimeout(() => {
-                styleBoxes();
-            }, 1000);
+            $("img[usemap]").rwdImageMaps();
         });
+        setTimeout(() => {
+            styleBoxes();
+        }, 2000)
     }
 });
 
