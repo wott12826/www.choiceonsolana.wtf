@@ -99,6 +99,10 @@ img {
     pointer-events: auto;
 }
 
+#box6 {
+    height: 202px !important;
+}
+
 @media screen and (max-width: 425px) {
     .rotate-wrap {
         display: flex;
