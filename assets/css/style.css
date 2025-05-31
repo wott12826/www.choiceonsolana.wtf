@@ -101,6 +101,7 @@ img {
 
 #box6 {
     height: 202px !important;
+    top: 202px !important;
 }
 
 @media screen and (max-width: 425px) {
