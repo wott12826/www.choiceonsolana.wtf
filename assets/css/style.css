@@ -95,9 +95,7 @@ img {
 }
 
 /* Make social media boxes clickable */
-#box3, #box4, #box5, #box6 {
-    pointer-events: auto;
-}
+
 
 #box6 {
     height: 202px !important;
