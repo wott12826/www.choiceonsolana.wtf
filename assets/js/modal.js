@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close modal when clicking on close button
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         modal.style.display = 'none';
     });
 
