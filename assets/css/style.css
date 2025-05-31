@@ -46,35 +46,6 @@ img {
     text-align: center;
 }
 
-
-/* .box {
-    position: absolute;
-    background-color: rgba(249, 47, 47, 0.678);
-    animation-name: blink;
-    animation-duration: .3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    animation-direction: alternate;
-    z-index: 10;
-    opacity: .7;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-@keyframes blink {
-    from {
-        opacity: .7;
-        transform: scale(1);
-    }
-
-    to {
-        opacity: 0.4;
-        transform: scale(1.1);
-    }
-} */
-
-
 .box {
     position: absolute;
     z-index: 10;
@@ -85,55 +56,47 @@ img {
     overflow: hidden;
     pointer-events: none;
     border: 1px solid #e60cc2a4;
+    animation: scaler .9s linear infinite alternate;
+    animation-timing-function: ease-in-out;
 }
 
 .box::before {
     content: "";
-    background-image: conic-gradient(
-        #e60cc2 20deg,
-        transparent 120deg
-    );
+    background-image: conic-gradient(#f357d979 20deg,
+            transparent 120deg);
     width: 150%;
-    height: 150%;
+    height: 200%;
     position: absolute;
-    top: -25%;
-    left: -25%;
-    animation: rotate 2s linear infinite;
+    top: 0;
+    left: 0;
+    animation: rotate 1s linear infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 50%;
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(-170%) scale(1);
     }
+
     100% {
-        transform: rotate(360deg);
+        transform: translateX(300%) scale(1.5);
+    }
+}
+
+@keyframes scaler {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
     }
 }
 
 /* Make social media boxes clickable */
-#box3, #box4, #box5 {
+#box3, #box4, #box5, #box6 {
     pointer-events: auto;
-}
-
-/* Generate Choice box specific style */
-#box6 {
-    pointer-events: auto;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 5px #e60cc2, inset 0 0 5px #e60cc2;
-        border-color: #e60cc2;
-    }
-    50% {
-        box-shadow: 0 0 20px #e60cc2, inset 0 0 10px #e60cc2;
-        border-color: #ff00dd;
-    }
-    100% {
-        box-shadow: 0 0 5px #e60cc2, inset 0 0 5px #e60cc2;
-        border-color: #e60cc2;
-    }
 }
 
 @media screen and (max-width: 425px) {
