@@ -97,10 +97,9 @@ img {
 /* Make social media boxes clickable */
 
 
-#box6 {
+/* #box6 {
     height: 202px !important;
-
-}
+} */
 
 @media screen and (max-width: 425px) {
     .rotate-wrap {
